@@ -5,11 +5,13 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:one": "node taskOne.js"
+    "start:one": "node taskOne.js",
+    "start:two": "node taskTwo.js"
   },
   "author": "Sohail Khan",
   "license": "MIT",
   "dependencies": {
+    "async": "^3.2.4",
     "express": "^4.18.2",
     "request": "^2.88.2"
   }
