@@ -5,21 +5,25 @@ const getTitleFromHTML = (html) => {
 
 const makeHtmlResponse = (sites) => {
   return `<html>
-
     <head></head>
-    
     <body>
         <h1> Following are the titles of given websites: </h1>
-        ${sites.map((site) => `<li> ${site.url} - "${site.title}" </li>`)}
         <ul>
-            <li> google.com - "Google" </li>
-            <li> www.dawn.com/events/ - "Events - DAWN.COM" </li>
+          ${sites.map((site) => `<li> ${site.address} - "${site.title}"</li>`).join('')}
         </ul>
     </body>
     </html>`;
 };
 
+function addProtocolIfNotExist(address) {
+  if (!address.startsWith('http://') && !address.startsWith('https://')) {
+    address = `http://${address}`;
+  }
+  return address;
+}
+
 module.exports = {
   getTitleFromHTML,
   makeHtmlResponse,
+  addProtocolIfNotExist
 };
