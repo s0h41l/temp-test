@@ -42,7 +42,7 @@ app.get("*", (req, res) => {
   res.status(404).send("<h2>Not Found</h2>");
 });
 
-const PORT = 3003;
+const PORT = 3000;
 
 app.listen(PORT, () => {
   console.log(`Server is started listening on port ${PORT}`);

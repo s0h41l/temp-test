@@ -1,0 +1,26 @@
+version: '3'
+services:
+  app1:
+    build:
+      context: .
+      dockerfile: ./docker-files/DockerfileTaskOne
+    ports:
+      - 3000:3000
+  app2:
+    build:
+      context: .
+      dockerfile: ./docker-files/DockerfileTaskTwo
+    ports:
+      - 3001:3000
+  app3:
+    build:
+      context: .
+      dockerfile: ./docker-files/DockerfileTaskThree
+    ports:
+      - 3002:3000
+  app4:
+    build:
+      context: .
+      dockerfile: ./docker-files/DockerfileTaskBonus
+    ports:
+      - 3003:3000
