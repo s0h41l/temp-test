@@ -6,12 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:one": "node taskOne.js",
-    "start:two": "node taskTwo.js"
+    "start:two": "node taskTwo.js",
+    "start:three": "node taskThree.js"
   },
   "author": "Sohail Khan",
   "license": "MIT",
   "dependencies": {
     "async": "^3.2.4",
+    "axios": "^1.4.0",
     "express": "^4.18.2",
     "request": "^2.88.2"
   }
